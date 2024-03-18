@@ -1,0 +1,89 @@
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portifolio</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+
+
+<body>
+  <header class="cabecalho">
+      <nav class="cabecalho__navbar">
+          <a class="cabecalho__navbar__link" href="index.html">Home</a>
+          <a class="cabecalho__navbar__link" href="aboutme.html">Sobre Mim</a>
+        <a class="cabecalho__navbar__link" href="form.html">Fale Comigo</a>
+      </nav>
+  </header>
+
+  
+  <br></br>
+  <h1 class="comigoentre">Entre em Contato Comigo</h1>
+  <br></br>
+  <form action="mailto:brendofcg@gmail.com" method="post" enctype="text/plain">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name"><br><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br><br>
+
+      <label for="Numero">Número:</label>
+      <input type="text" id="Numero" name="Numero"><br><br>
+
+      <label for="comentario">Comentário:</label>
+      <textarea id="comentario" name="comentario"></textarea><br><br>
+
+      <input type="submit" value="Enviar"> 
+  </form>
+
+
+  <style>
+    form {
+      background-color: blueviolet;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 5px;
+      background-color: rgba(138, 43, 226, 0.7);
+      padding: 15px;
+      margin: 0 10%;
+      border-radius: 5px;
+ 
+    }
+
+    label{
+      color: black;
+      font-size: 30px;
+    }
+
+    
+    input[type=Numero],
+    input[type=text],
+    input[type=email],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type=submit] {
+      background-color: #e55757;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: #272727;
+      color: black;
+    }
+    
+  </style>
+
+</body>
