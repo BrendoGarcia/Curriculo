@@ -16,7 +16,6 @@
 }
 
 body{
-    /* height: 100vh; (ctrl+k+C)*/
     box-sizing: border-box;
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
@@ -90,7 +89,10 @@ body{
     text-align: center;
     font-family: var(--fonte-secundaria);
     font-size: 1.5rem;
+    width: 100%;
     font-weight: 400;
+ 
+
 }
 
 .cabecalho{
@@ -206,10 +208,87 @@ body{
 }
 
 .lojaminha {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
   background-color: #333;
   color: white;
   padding: 10px 0;
   text-align: center;
+
+}
+.carinhocompras {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+}
+
+.imagemcarinho {
+    cursor: pointer;
+}
+
+.itensnocarinho {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    min-width: 200px;
+    z-index: 1;
+}
+
+.itensnocarinho:empty {
+    display: none;
+}
+
+.itensnocarinho:empty + .cart-icon {
+    pointer-events: none;
+}
+
+.itensnocarinho:empty ~ .cart-icon .item-count {
+    display: none;
+}
+
+.itensnocarinho:empty ~ .cart-icon img {
+    filter: grayscale(100%);
+}
+
+.itensnocarinho:empty ~ .cart-icon:hover .item-count {
+    display: none;
+}
+
+.itensnocarinho:empty ~ .cart-icon:hover img {
+    filter: none;
+}
+
+.itensnocarinho:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #fff transparent;
+}
+
+
+.contadordeitens {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: red;
+    color: #fff;
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 50%;
+}
+
+
+.imagemcarinho img {
+    width: 24px;
+    height: 24px;
 }
 
 .credprodutos {
@@ -252,7 +331,7 @@ body{
   text-align: center;
 }
 
-.produtos button {
+.botaoadicionar {
   background-color: #3c549a;
   color: white;
   border: none;
@@ -264,7 +343,7 @@ body{
   transition: background-color 0.3s ease;
 }
 
-.produtos button:hover {
+.botaoadicionar:hover {
   background-color: #aa6e6e;
 }
 .nomeProdutos{
@@ -272,5 +351,54 @@ body{
   font-family:var(--fonte-primaria);
   color: var(--cor-terciaria);
 }
-
+@media screen and (max-width: 768px) {
+.corpoEcomerce {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
+
+
+
+  .itemCarrinho {
+      color: #e55757;
+  }
+
+  
+  .itensnocarinho {
+      display: flex;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      min-width: 200px;
+      z-index: 1;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  }
+
+
+  
+.busca{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.campoBusca {
+  width: 50%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid var(--cor-terciaria);
+  border-radius: 5px;
+}
+
+
+.produtos{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+}  
+
