@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="imgs">
+  <script src="script.js"></script>
+ 
 <title>E-Commerce</title>
 </head>
   
@@ -21,63 +22,99 @@
   
 
 <header class="lojaminha">
-    <h1>Loja do Brendo</h1>
+    <h1>E-Commerce Garcias</h1>
+  <a<div class="carinhocompras">
+  <div class="imagemcarinho">
+      <img src="https://img.icons8.com/material-outlined/24/000000/shopping-cart--v1.png"/>
+      <span class="contadordeitens">0</span>
+  </div>
+    
+    <div class="itensnocarinho" id="itensNoCarrinho">
+        <!-- Lista de itens no carrinho -->
+        <ul id="listaItensCarrinho">
+          
+        </ul>
+    </div>
+  </div></a>
 </header>
 
+  <div class="busca" >
+    <input type="text" class="campoBusca" placeholder="Buscar produtos...">
+    <img src="/imgs/transferir-removebg-preview.png" width="40" height="40"/>
+  </div>
+<style>
+  
+  .busca{
+    cursor:pointer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  .campoBusca {
+    width: 50%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid var(--cor-terciaria);
+    border-radius: 5px;
+  }
+</style>
+  
 <div class="credprodutos">
     <div class="produtos">
-        <img src="imgs/xbox.png" alt="xbox" height="300" width="300"> 
+        <img src="/imgs/xbox.webp" alt="xbox" height="300" width="300"> 
         <h2 class="nomeProdutos">Console Xbox Series X</h2>
         <p class="precoProdutps">R$ 3.799,00</p>
-        <button>Adicionar ao Carrinho</button>
+        <button class="botaoadicionar">Adicionar ao Carrinho</button>
     </div>
     <div class="produtos">
-        <img src="imgs/atari.png" alt="atari" height="300" width="300">
+        <img src="/imgs/atari.webp" alt="atari" height="300" width="300">
         <h2 class="nomeProdutos">Atari Flashback Preto</h2>
         <p class="precoProdutps">R$ 529,90</p>
-        <button>Adicionar ao Carrinho</button>
+        <button class="botaoadicionar">Adicionar ao Carrinho</button>
     </div>
     <div class="produtos">
-        <img src="imgs/bebida.png" alt="Whisky Jack" height="300" width="300">
+        <img src="/imgs/bebida.webp" alt="Whisky Jack" height="300" width="300">
         <h2 class="nomeProdutos">Whisky Jack Single Barrel </h2>
         <p class="precoProdutps">R$ 270,00</p>
-        <button>Adicionar ao Carrinho</button>
+        <button class="botaoadicionar">Adicionar ao Carrinho</button>
     </div>
     <div class="produtos">
-        <img src="imgs/fone.png" alt="JBL, Fone de Ouvido" height="300" width="300">
+        <img src="/imgs/fone.webp" alt="JBL, Fone de Ouvido" height="300" width="300">
         <h2 class="nomeProdutos">Fone de Ouvido JBL</h2>
         <p class="precoProdutps">R$ 230,00</p>
-        <button>Adicionar ao Carrinho</button>
+        <button class="botaoadicionar">Adicionar ao Carrinho</button>
     </div>
     <div class="produtos">
-        <img src="imgs/pc.png" alt="Pc Gamer Computador" height="300" width="300">
+        <img src="/imgs/pc.webp" alt="Pc Gamer Computador" height="300" width="300">
         <h2 class="nomeProdutos">Pc Gamer Computador</h2>
         <p class="precoProdutps">R$ 3.599,90</p>
-        <button>Adicionar ao Carrinho</button>
+        <button class="botaoadicionar">Adicionar ao Carrinho</button>
     </div>
     <div class="produtos">
-        <img src="imgs/torre.png" alt="Torre Equilíbrio Clássica" height="300" width="300">
+        <img src="/imgs/torre.webp" alt="Torre Equilíbrio Clássica" height="300" width="300">
         <h2 class="nomeProdutos">Torre Equilíbrio Clássica</h2>
         <p class="precoProdutps">R$ 30,90</p>
-        <button>Adicionar ao Carrinho</button>
+        <button class="botaoadicionar">Adicionar ao Carrinho</button>
     </div>
     <div class="produtos">
-        <img src="imgs/ps5.png" alt="PlayStation®5 Slim Edição Digital" height="300" width="300">
+        <img src="/imgs/ps5.webp" alt="PlayStation®5 Slim Edição Digital" height="300" width="300">
         <h2 class="nomeProdutos">PlayStation®5 Slim Edição Digital</h2>
         <p class="precoProdutps">R$ 3.781,00</p>
-        <button>Adicionar ao Carrinho</button>
+        <button class="botaoadicionar">Adicionar ao Carrinho</button>
     </div>
     <div class="produtos">
-        <img src="imgs/mobi.png" alt="Banco Imobiliário Realidade Aumentada" height="300" width="300">
+        <img src="/imgs/mobi.webp" alt="Banco Imobiliário Realidade Aumentada" height="300" width="300">
         <h2 class="nomeProdutos">Banco Imobiliário Realidade Aumentada</h2>
         <p class="precoProdutps">R$ 100,08</p>
-        <button>Adicionar ao Carrinho</button>
+        <button class="botaoadicionar" >Adicionar ao Carrinho</button>
     </div>
     <div class="produtos">
-        <img src="imgs/silvamrioliom.jpg" alt="O Silmarillion" height="300" width="300">
+        <img src="/imgs/silvamrioliom.jpg" alt="O Silmarillion" height="300" width="300">
         <h2 class="nomeProdutos">Livro O Silmarillion</h2>
         <p class="precoProdutps">R$ 48,58</p>
-        <button>Adicionar ao Carrinho</button>
+        <button class="botaoadicionar">Adicionar ao Carrinho</button>
     </div>
 </div>
 
