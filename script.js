@@ -4,7 +4,22 @@ document.addEventListener("DOMContentLoaded", function() {
   var carrinho = document.querySelector(".itensnocarinho");
 
 
-  
+  // Botão para finalizar a compra
+  var botaoFinalizarCompra = document.createElement("button");
+  botaoFinalizarCompra.innerText = "Finalizar Compra";
+  botaoFinalizarCompra.classList.add("botaoFinalizar"); 
+  carrinho.appendChild(botaoFinalizarCompra);
+  // Estilizando o botão de finalizar compra
+  botaoFinalizarCompra.style.backgroundColor = "#4CAF50";
+  botaoFinalizarCompra.style.color = "white";
+  botaoFinalizarCompra.style.padding = "10px 20px";
+  botaoFinalizarCompra.style.border = "none";
+  botaoFinalizarCompra.style.borderRadius = "5px";
+  botaoFinalizarCompra.style.cursor = "pointer";
+  botaoFinalizarCompra.addEventListener("click", function() {
+    alert("Compras Realizadas com Sucesso!!");
+  });
+
   
   
   botoesAdicionar.forEach(function(botao) {
@@ -85,21 +100,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   
-  // Botão para finalizar a compra
-  var botaoFinalizarCompra = document.createElement("button");
-  botaoFinalizarCompra.innerText = "Finalizar Compra";
-  botaoFinalizarCompra.classList.add("botaoFinalizar"); 
-  carrinho.appendChild(botaoFinalizarCompra);
-  // Estilizando o botão de finalizar compra
-  botaoFinalizarCompra.style.backgroundColor = "#4CAF50";
-  botaoFinalizarCompra.style.color = "white";
-  botaoFinalizarCompra.style.padding = "10px 20px";
-  botaoFinalizarCompra.style.border = "none";
-  botaoFinalizarCompra.style.borderRadius = "5px";
-  botaoFinalizarCompra.style.cursor = "pointer";
-  botaoFinalizarCompra.addEventListener("click", function() {
-    alert("Compras Realizadas com Sucesso!!");
-  });
+  
 
 });
 
