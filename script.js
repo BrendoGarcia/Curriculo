@@ -58,12 +58,14 @@ function atualizarContadorItens() {
                 var nomeProduto = produto.querySelector(".nomeProdutos").innerText;
                 if (nomeProduto.toLowerCase().includes(termoBusca.toLowerCase())) {
                     produto.style.display = "block";
+                 
                 } else {
                     produto.style.display = "none";
+                 
                 }
 
                 // Definir um tamanho padrão para os itens da busca
-                produto.style.height = "300";
+                produto.style.width = "300px";
               
             });
         });
